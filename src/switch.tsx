@@ -1,13 +1,12 @@
 import {
   createContext,
-  React,
   type ReactElement,
   type ReactNode,
   URLPatternList,
   type URLPatternListResult,
   useContext,
   useMemo,
-} from "./deps.ts";
+} from "../deps.ts";
 import { useURL } from "./router.tsx";
 
 export interface SwitchProps {

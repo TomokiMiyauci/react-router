@@ -1,4 +1,4 @@
-import { useMemo } from "./deps.ts";
+import { useMemo } from "../deps.ts";
 
 export function useURLPattern(
   input: URLPatternInit,

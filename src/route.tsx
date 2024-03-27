@@ -1,10 +1,4 @@
-import {
-  createContext,
-  React,
-  type ReactNode,
-  useContext,
-  useMemo,
-} from "./deps.ts";
+import { createContext, type ReactNode, useContext, useMemo } from "../deps.ts";
 import { useURL } from "./router.tsx";
 import { usePreResult } from "./switch.tsx";
 import { useURLPattern } from "./utils.ts";

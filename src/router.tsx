@@ -1,12 +1,11 @@
 import {
   createContext,
   type Navigation,
-  React,
   type ReactNode,
   useContext,
   useMemo,
   useSyncExternalStore,
-} from "./deps.ts";
+} from "../deps.ts";
 import { Msg } from "./constants.ts";
 
 export interface RouterProps {

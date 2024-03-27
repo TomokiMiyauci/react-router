@@ -19,12 +19,12 @@ export {
   default as Route,
   type RouteProps,
   useURLPatternResult,
-} from "./route.tsx";
+} from "./src/route.tsx";
 export {
   default as Router,
   type GetURL,
   type RouterProps,
   type Subscribe,
   useURL,
-} from "./router.tsx";
-export { default as Switch, type SwitchProps } from "./switch.tsx";
+} from "./src/router.tsx";
+export { default as Switch, type SwitchProps } from "./src/switch.tsx";
