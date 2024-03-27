@@ -34,6 +34,21 @@ export interface Subscribe {
   (dispatch: VoidFunction): VoidFunction;
 }
 
+/** Router provider.
+ *
+ * @example
+ * ```tsx
+ * import { Router } from "https://deno.land/x/react_router/mod.ts";
+ * import { type ReactNode } from "npm:react";
+ *
+ * declare const Html: () => ReactNode;
+ * declare const url: URL | string;
+ *
+ * <Router url={url}>
+ *   <Html />
+ * </Router>;
+ * ```
+ */
 export default function Router(props: Readonly<RouterProps>): ReactNode {
   const {
     url: _url = getLocationHref,
@@ -71,8 +86,23 @@ function subscribeNavigateSuccess(callback: VoidFunction): VoidFunction {
 
 const URLContext = createContext<URL | null>(null);
 
-/**
- * @throws {Error}
+/** Hooks for reactive `URL`.
+ *
+ * @example
+ * ```tsx
+ * import { Router, useURL } from "https://deno.land/x/react_router/mod.ts";
+ *
+ * <Router>
+ *   <Html />
+ * </Router>;
+ *
+ * function Html() {
+ *   const url = useURL();
+ *   return null;
+ * }
+ * ```
+ *
+ * @throws {Error} If used outside of the {@link Router}.
  */
 export function useURL(): URL {
   const ctx = useContext(URLContext);

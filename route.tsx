@@ -14,8 +14,16 @@ export interface RouteProps extends URLPatternInit {
   children?: ReactNode;
 }
 
-/**
- * @throws {Error}
+/** Matching by `URLPattern`.
+ *
+ * @example
+ * ```tsx
+ * import { Route } from "https://deno.land/x/react_router/mod.ts";
+ *
+ * const node = <Route pathname="/">Home</Route>;
+ * ```
+ *
+ * @throws {Error} If it used outside of the `<Router>`.
  */
 export default function Route(props: Readonly<RouteProps>): ReactNode {
   const { children, ...urlPatternInit } = props;
@@ -40,8 +48,25 @@ export default function Route(props: Readonly<RouteProps>): ReactNode {
 
 const URLPatternResultContext = createContext<URLPatternResult | null>(null);
 
-/**
- * @throws {Error}
+/** Hooks for `URLPatternResult`.
+ *
+ * @example
+ * ```tsx
+ * import { Route, useURLPatternResult } from "https://deno.land/x/react_router/mod.ts";
+ *
+ * <Route pathname="/users/:id">
+ *   <User />
+ * </Route>;
+ *
+ * function User() {
+ *   const result = useURLPatternResult();
+ *   const id = result.pathname.groups.id;
+ *
+ *   return null;
+ * }
+ * ```
+ *
+ * @throws {Error} If used outside of the {@link Route}.
  */
 export function useURLPatternResult(): URLPatternResult {
   const ctx = useContext(URLPatternResultContext);

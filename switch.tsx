@@ -11,12 +11,28 @@ import {
 import { useURL } from "./router.tsx";
 
 export interface SwitchProps {
+  /** Fallback if nothing matches. */
   fallback?: ReactNode;
+
   children?:
     | ReactElement<URLPatternInit>
     | ReactElement<URLPatternInit>[]; // TODO: Iterable
 }
 
+/** Exclusive conditional branching of `Route`.
+ *
+ * @example
+ * ```tsx
+ * import { Route, Switch } from "https://deno.land/x/react_router/mod.ts";
+ *
+ * <Switch fallback={"NotFound"}>
+ *   <Route pathname="/"></Route>
+ *   <Route pathname="/about"></Route>
+ * </Switch>;
+ * ```
+ *
+ * @throws {Error} If it used outside of the `<Router>`.
+ */
 export default function Switch(props: SwitchProps): ReactNode {
   const url = useURL();
   const { children: _children, fallback } = props;
