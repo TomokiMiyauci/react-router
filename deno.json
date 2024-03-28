@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "https://esm.sh/*react@18.2.0?dev"
+  },
+  "nodeModulesDir": false,
+  "imports": {
+    "npm:/react@18.2.0": "https://esm.sh/*react@18.2.0?dev",
+    "react": "https://esm.sh/*react@18.2.0?dev",
+    "npm:/react@18.2.0/": "https://esm.sh/*react@18.2.0&dev/",
+    "react-dom": "https://esm.sh/*react-dom@18.2.0?dev",
+    "react-dom/": "https://esm.sh/*react-dom@18.2.0&dev/",
+    "scheduler": "https://esm.sh/scheduler",
+    "https://deno.land/x/react_router/": "./"
+  }
+}
