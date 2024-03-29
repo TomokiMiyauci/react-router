@@ -38,8 +38,8 @@ export interface Subscribe {
  *
  * @example
  * ```tsx
- * import { Router } from "https://deno.land/x/react_router/mod.ts";
- * import { type ReactNode } from "npm:react";
+ * import { Router } from "@miyauci/react-router";
+ * import { type ReactNode } from "react";
  *
  * declare const Html: () => ReactNode;
  * declare const url: URL | string;
@@ -88,7 +88,7 @@ const URLContext = createContext<URL | null>(null);
  *
  * @example
  * ```tsx
- * import { Router, useURL } from "https://deno.land/x/react_router/mod.ts";
+ * import { Router, useURL } from "@miyauci/react-router";
  *
  * <Router>
  *   <Html />

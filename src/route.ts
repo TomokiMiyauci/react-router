@@ -18,7 +18,7 @@ export interface RouteProps extends URLPatternInit {
  *
  * @example
  * ```tsx
- * import { Route } from "https://deno.land/x/react_router/mod.ts";
+ * import { Route } from "@miyauci/react-router";
  *
  * const node = <Route pathname="/">Home</Route>;
  * ```
@@ -54,7 +54,7 @@ const URLPatternResultContext = createContext<URLPatternResult | null>(null);
  *
  * @example
  * ```tsx
- * import { Route, useURLPatternResult } from "https://deno.land/x/react_router/mod.ts";
+ * import { Route, useURLPatternResult } from "@miyauci/react-router";
  *
  * <Route pathname="/users/:id">
  *   <User />

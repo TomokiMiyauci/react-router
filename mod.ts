@@ -2,8 +2,8 @@
  *
  * @example
  * ```tsx
- * import { Route, Router, Switch } from "https://deno.land/x/react_router/mod.ts";
- * import { type ReactNode } from "npm:react";
+ * import { Route, Router, Switch } from "@miyauci/react-router";
+ * import { type ReactNode } from "react";
  *
  * declare const Home: () => ReactNode;
  * declare const About: () => ReactNode;

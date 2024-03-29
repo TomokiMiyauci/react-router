@@ -23,7 +23,7 @@ export interface SwitchProps {
  *
  * @example
  * ```tsx
- * import { Route, Switch } from "https://deno.land/x/react_router/mod.ts";
+ * import { Route, Switch } from "@miyauci/react-router";
  *
  * <Switch fallback={"NotFound"}>
  *   <Route pathname="/"></Route>
