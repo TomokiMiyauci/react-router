@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx"
+    "noUncheckedIndexedAccess": true,
+    "jsx": "react-jsx",
+
+    "types": ["./test_declare_navigation.ts"]
   },
   "name": "@miyauci/react-router",
-  "version": "1.0.0",
+  "version": "0.1.0-beta.1",
   "exports": "./mod.ts",
   "publish": {
     "exclude": [
-      "**/*.tsx"
+      "**/*_test.tsx"
     ]
   }
 }

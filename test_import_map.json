@@ -1,7 +1,6 @@
 {
   "imports": {
-    "@deno/dnt": "jsr:@deno/dnt@^0.41.1",
-    "https://deno.land/x/react_router/": "./",
+    "@miyauci/react-router": "./mod.ts",
     "npm:/react@18.2.0": "https://esm.sh/*react@18.2.0?dev",
     "npm:/react@18.2.0/": "https://esm.sh/*react@18.2.0&dev/",
     "react": "https://esm.sh/*react@18.2.0?dev",
