@@ -1,3 +1,4 @@
+import { createElement } from "../deps.ts";
 import {
   createContext,
   type ReactElement,
@@ -7,7 +8,7 @@ import {
   useContext,
   useMemo,
 } from "../deps.ts";
-import { useURL } from "./router.tsx";
+import { useURL } from "./router.ts";
 
 export interface SwitchProps {
   /** Fallback if nothing matches. */
@@ -63,11 +64,7 @@ export default function Switch(props: SwitchProps): ReactNode {
   if (result) {
     const child = map.get(result.pattern);
 
-    return (
-      <PreResultContext.Provider value={result}>
-        {child}
-      </PreResultContext.Provider>
-    );
+    return createElement(PreResultContext.Provider, { value: result }, child);
   }
 
   return fallback;

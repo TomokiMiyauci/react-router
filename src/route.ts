@@ -1,6 +1,12 @@
-import { createContext, type ReactNode, useContext, useMemo } from "../deps.ts";
-import { useURL } from "./router.tsx";
-import { usePreResult } from "./switch.tsx";
+import {
+  createContext,
+  createElement,
+  type ReactNode,
+  useContext,
+  useMemo,
+} from "../deps.ts";
+import { useURL } from "./router.ts";
+import { usePreResult } from "./switch.ts";
 import { useURLPattern } from "./utils.ts";
 import { Msg } from "./constants.ts";
 
@@ -33,16 +39,18 @@ export default function Route(props: Readonly<RouteProps>): ReactNode {
 
   if (result) {
     return (
-      <URLPatternResultContext.Provider value={result}>
-        {children}
-      </URLPatternResultContext.Provider>
+      createElement(
+        URLPatternResultContext.Provider,
+        { value: result },
+        children,
+      )
     );
   }
 }
 
 const URLPatternResultContext = createContext<URLPatternResult | null>(null);
 
-/** Hooks for `URLPatternResult`.
+/** Hooks for matching result.
  *
  * @example
  * ```tsx

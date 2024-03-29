@@ -1,5 +1,6 @@
 import {
   createContext,
+  createElement,
   type Navigation,
   type ReactNode,
   useContext,
@@ -63,9 +64,7 @@ export default function Router(props: Readonly<RouterProps>): ReactNode {
   const url = useMemo<URL>(() => new URL(rawURL), [rawURL]);
 
   return (
-    <URLContext.Provider value={url}>
-      {children}
-    </URLContext.Provider>
+    createElement(URLContext.Provider, { value: url }, children)
   );
 }
 

@@ -3,13 +3,27 @@
  * @example
  * ```tsx
  * import { Route, Router, Switch } from "https://deno.land/x/react_router/mod.ts";
+ * import { type ReactNode } from "npm:react";
  *
- * <Router>
- *   <Switch fallback={"NotFound"}>
- *     <Route pathname="/"></Route>
- *     <Route pathname="/about"></Route>
- *   </Switch>;
- * </Router>;
+ * declare const Home: () => ReactNode;
+ * declare const About: () => ReactNode;
+ * declare const NotFound: () => ReactNode;
+ *
+ * function App() {
+ *   return (
+ *     <Router>
+ *       <Switch fallback={<NotFound />}>
+ *         <Route pathname="/">
+ *           <Home />
+ *         </Route>
+ *
+ *         <Route pathname="/about">
+ *           <About />
+ *         </Route>
+ *       </Switch>
+ *     </Router>
+ *   );
+ * }
  * ```
  *
  * @module
@@ -19,12 +33,12 @@ export {
   default as Route,
   type RouteProps,
   useURLPatternResult,
-} from "./src/route.tsx";
+} from "./src/route.ts";
 export {
   default as Router,
   type GetURL,
   type RouterProps,
   type Subscribe,
   useURL,
-} from "./src/router.tsx";
-export { default as Switch, type SwitchProps } from "./src/switch.tsx";
+} from "./src/router.ts";
+export { default as Switch, type SwitchProps } from "./src/switch.ts";

@@ -1,7 +1,7 @@
 // @deno-types="npm:@types/react"
 export {
   createContext,
-  default as React,
+  createElement,
   type ReactElement,
   type ReactNode,
   useContext,
