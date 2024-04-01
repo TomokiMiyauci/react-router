@@ -8,6 +8,11 @@
     "noUncheckedIndexedAccess": true,
     "types": ["./_navigation.ts"]
   },
+  "fmt": {
+    "exclude": [
+      "CHANGELOG.md"
+    ]
+  },
   "imports": {
     "react": "https://esm.sh/*react@18.2.0?dev",
     "@miyauci/react-router": "./mod.ts",
