@@ -8,8 +8,11 @@
 
 Next generation React router.
 
-A minimal router based on `URLPattern` API and `Navigation` API. No more need
-for `<Link>` or `<A>`.
+A minimal router based on
+[URLPattern](https://developer.mozilla.org/en-US/docs/Web/API/URL_Pattern_API)
+API and
+[Navigation](https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API)
+API. No more `<Link>` or `<A>`.
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -83,9 +86,9 @@ client side.
 
 ### Client Side Navigation
 
-To perform client-side navigation, intercept the `navigate` event.
+Intercept the `navigate` event on client side navigation.
 
-At your client entry point:
+Add your client entry point:
 
 ```ts
 globalThis.navigation.addEventListener("navigate", (e) => {
@@ -96,11 +99,8 @@ globalThis.navigation.addEventListener("navigate", (e) => {
 });
 ```
 
-This ensures that navigation is done only for URL changes. The Router will also
-subscribe to URL changes and route them reactively.
-
-This ensures that navigation is only done with URL changes. In addition,
-`Router` will subscribe to URL changes and route them reactively.
+This ensures that navigation is done only for URL changes. The `Router` will
+also subscribe to URL changes and route them reactively.
 
 See
 [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api)
@@ -139,7 +139,7 @@ This should further reduce the bundle size.
 
 ## API
 
-See [deno doc](https://jsr.io/@miyauci/react-router) for all APIs.
+See [jsr doc](https://jsr.io/@miyauci/react-router) for all APIs.
 
 ## Contributing
 
