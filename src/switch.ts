@@ -3,12 +3,12 @@ import {
   createContext,
   type ReactElement,
   type ReactNode,
-  URLPatternList,
   type URLPatternListResult,
   useContext,
   useMemo,
 } from "../deps.ts";
 import { useURL } from "./router.ts";
+import { useURLPatternList } from "./utils.ts";
 
 export interface SwitchProps {
   /** Fallback if nothing matches. */
@@ -47,16 +47,14 @@ export default function Switch(props: SwitchProps): ReactNode {
     return children.map(toEntry);
   }, [children]);
 
-  const patternList = useMemo<URLPatternList>(() => {
-    const patterns = patternEntry.map(([first]) => first);
-
-    return new URLPatternList(patterns);
+  const patterns = useMemo<URLPattern[]>(() => {
+    return patternEntry.map(([first]) => first);
   }, [patternEntry]);
-
   const map = useMemo<WeakMap<URLPattern, ReactElement>>(() => {
     return new WeakMap<URLPattern, ReactElement>(patternEntry);
   }, [patternEntry]);
 
+  const patternList = useURLPatternList(patterns);
   const result = useMemo<URLPatternListResult | null>(() => {
     return patternList.exec(url);
   }, [patternList, url]);

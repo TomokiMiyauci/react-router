@@ -1,4 +1,4 @@
-import { useMemo } from "../deps.ts";
+import { URLPatternList, useMemo } from "../deps.ts";
 
 export function useURLPattern(
   input: URLPatternInit,
@@ -41,4 +41,14 @@ export function useURLPattern(
   ]);
 
   return pattern;
+}
+
+export function useURLPatternList(
+  patterns: Iterable<URLPattern>,
+): URLPatternList {
+  const list = useMemo<URLPatternList>(() => {
+    return new URLPatternList(patterns);
+  }, [patterns]);
+
+  return list;
 }
