@@ -3,7 +3,7 @@
 [![JSR](https://jsr.io/badges/@miyauci/react-router)](https://jsr.io/@miyauci/react-router)
 [![GitHub](https://img.shields.io/github/license/TomokiMiyauci/react-router)](https://github.com/TomokiMiyauci/react-router/blob/main/LICENSE)
 
-[![test](https://github.com/TomokiMiyauci/react-router/actions/workflows/test.yaml/badge.svg)](https://github.com/TomokiMiyauci/react-router/actions/workflows/test.yaml)
+[![test](https://github.com/TomokiMiyauci/react-router/actions/workflows/publish.yaml/badge.svg)](https://github.com/TomokiMiyauci/react-router/actions/workflows/publish.yaml)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 
 Next generation React router.
