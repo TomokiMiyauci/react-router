@@ -26,10 +26,14 @@ export interface RouterProps {
   children?: ReactNode;
 }
 
+/** URL lazy getter. */
 export interface GetURL {
   (): string | URL;
 }
 
+/** Subscribe interface.
+ * Call {@link dispatch} to notify. Return cleanup function.
+ */
 export interface Subscribe {
   (dispatch: VoidFunction): VoidFunction;
 }
