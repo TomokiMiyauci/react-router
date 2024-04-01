@@ -7,6 +7,9 @@ on:
 jobs:
   release:
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+      id-token: write
 
     strategy:
       matrix:
