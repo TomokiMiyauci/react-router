@@ -3,8 +3,10 @@
   "packages": {
     "specifiers": {
       "npm:@types/react": "npm:@types/react@18.2.69",
+      "npm:@types/react@18.2.73": "npm:@types/react@18.2.73",
       "npm:@virtualstate/navigation@1.0.1-alpha.201": "npm:@virtualstate/navigation@1.0.1-alpha.201",
-      "npm:react": "npm:react@18.2.0"
+      "npm:react": "npm:react@18.2.0",
+      "npm:react@18.2.0": "npm:react@18.2.0"
     },
     "npm": {
       "@types/prop-types@15.7.12": {
@@ -16,6 +18,13 @@
         "dependencies": {
           "@types/prop-types": "@types/prop-types@15.7.12",
           "@types/scheduler": "@types/scheduler@0.16.8",
+          "csstype": "csstype@3.1.3"
+        }
+      },
+      "@types/react@18.2.73": {
+        "integrity": "sha512-XcGdod0Jjv84HOC7N5ziY3x+qL0AfmubvKOZ9hJjJ2yd5EE+KYjWhdOjt387e9HPheHkdggF9atTifMRtyAaRA==",
+        "dependencies": {
+          "@types/prop-types": "@types/prop-types@15.7.12",
           "csstype": "csstype@3.1.3"
         }
       },
@@ -66,6 +75,7 @@
     }
   },
   "redirects": {
+    "https://esm.sh/*react/jsx-runtime": "https://esm.sh/*react@18.2.0/jsx-runtime",
     "https://esm.sh/v128/@types/react@~18.2/X-ZS8q/jsx-runtime~.d.ts": "https://esm.sh/v128/@types/react@18.2.38/X-ZS8q/jsx-runtime~.d.ts",
     "https://esm.sh/v128/@types/react@~18.2/index.d.ts": "https://esm.sh/v128/@types/react@18.2.38/index.d.ts",
     "https://esm.sh/v135/@types/react-dom@~18.2/X-ZS8q/server~.d.ts": "https://esm.sh/v135/@types/react-dom@18.2.18/X-ZS8q/server~.d.ts"
@@ -81,9 +91,11 @@
     "https://deno.land/std@0.220.1/assert/equal.ts": "fae5e8a52a11d3ac694bbe1a53e13a7969e3f60791262312e91a3e741ae519e2",
     "https://deno.land/std@0.220.1/fmt/colors.ts": "d239d84620b921ea520125d778947881f62c50e78deef2657073840b8af9559a",
     "https://esm.sh/*react-dom@18.2.0&dev/server": "97fc5bf22c1310843bd03c651d9456792d27f73e9787bcb668e7905eec4d11f7",
+    "https://esm.sh/*react@18.2.0/jsx-runtime": "4253d1c571214b24304aae6d0eaa584f3d3dc2ce2dbfc701aa86f2a4ff9fe9e3",
     "https://esm.sh/*react@18.2.0?dev": "1fe185734f3d77826efb78a22779899d143bb1160baaf5bbf01edee9f4eaa9d5",
     "https://esm.sh/*react@18.2.0?dev/jsx-runtime": "dcb6a0aadb43a9553ed83626f1116aefacb0307ee751ec8bc82b49f0a6cfd4c6",
     "https://esm.sh/stable/react@18.2.0/X-ZS8q/denonext/jsx-runtime.development.js": "11204ed51aa72494e76103334575efcd7368a0b2959f908684a3a5b77448d171",
+    "https://esm.sh/stable/react@18.2.0/X-ZS8q/denonext/jsx-runtime.js": "bff225db3d040277045e11bdc3f8a4abe8e24f03feb169a7119609428f301406",
     "https://esm.sh/stable/react@18.2.0/denonext/react.development.mjs": "88729b33eccbea2c09894f07459f32911777721a3b50fd32151182e82c4351e2",
     "https://esm.sh/v135/react-dom@18.2.0/X-ZS8q/denonext/server.development.js": "ef4b061112a181a28482c810c251ea79af97847202c9c16b6926d364b870c60c"
   }

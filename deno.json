@@ -1,16 +1,20 @@
 {
-  "compilerOptions": {
-    "noUncheckedIndexedAccess": true,
-    "jsx": "react-jsx",
-
-    "types": ["./test_declare_navigation.ts"]
+  "tasks": {
+    "test": "deno test --doc",
+    "publish": "deno publish -c jsr.json"
   },
-  "name": "@miyauci/react-router",
-  "version": "0.1.0-beta.1",
-  "exports": "./mod.ts",
-  "publish": {
-    "exclude": [
-      "**/*_test.tsx"
-    ]
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "noUncheckedIndexedAccess": true,
+    "types": ["./_navigation.ts"]
+  },
+  "imports": {
+    "react": "https://esm.sh/*react@18.2.0?dev",
+    "@miyauci/react-router": "./mod.ts",
+    "react-dom": "https://esm.sh/*react-dom@18.2.0?dev",
+    "react-dom/": "https://esm.sh/*react-dom@18.2.0&dev/",
+    "npm:/react@18.2.0": "https://esm.sh/*react@18.2.0?dev",
+    "npm:/react@18.2.0/": "https://esm.sh/*react@18.2.0&dev/",
+    "scheduler": "https://esm.sh/scheduler"
   }
 }
