@@ -37,4 +37,5 @@ jobs:
           path: ./jsr.json
 
       - name: publish
-        run: deno task publish
+        # --allow-dirty is required because the uncommit file exists because the jsr config was changed in the previous job.
+        run: deno task publish --allow-dirty
