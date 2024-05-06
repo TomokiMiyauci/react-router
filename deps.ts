@@ -1,4 +1,4 @@
-// @deno-types="npm:@types/react@18.2.73"
+// @deno-types="npm:@types/react@^18.0.0"
 export {
   createContext,
   createElement,
@@ -7,7 +7,7 @@ export {
   useContext,
   useMemo,
   useSyncExternalStore,
-} from "npm:/react@18.2.0";
+} from "npm:/react@^18.0.0";
 export {
   URLPatternList,
   type URLPatternListResult,

@@ -4,9 +4,11 @@
     "specifiers": {
       "npm:@types/react": "npm:@types/react@18.2.69",
       "npm:@types/react@18.2.73": "npm:@types/react@18.2.73",
+      "npm:@types/react@^18.0.0": "npm:@types/react@18.2.73",
       "npm:@virtualstate/navigation@1.0.1-alpha.201": "npm:@virtualstate/navigation@1.0.1-alpha.201",
       "npm:react": "npm:react@18.2.0",
-      "npm:react@18.2.0": "npm:react@18.2.0"
+      "npm:react@18.2.0": "npm:react@18.2.0",
+      "npm:react@^18.0.0": "npm:react@18.2.0"
     },
     "npm": {
       "@types/prop-types@15.7.12": {

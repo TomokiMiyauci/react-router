@@ -1,3 +1,10 @@
+# [1.1.0-beta.1](https://github.com/TomokiMiyauci/react-router/compare/1.0.0...1.1.0-beta.1) (2024-05-06)
+
+
+### Features
+
+* **deps:** change dependency package version scope ([7f32120](https://github.com/TomokiMiyauci/react-router/commit/7f32120f2b08ab652f1c1d2b4b8716bbe7b3db11))
+
 # 1.0.0 (2024-04-02)
 
 
