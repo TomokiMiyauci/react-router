@@ -1,7 +1,6 @@
 import {
   createContext,
   createElement,
-  type Navigation,
   type ReactNode,
   useContext,
   useMemo,
@@ -77,11 +76,11 @@ function getLocationHref(): string {
 }
 
 function subscribeNavigateSuccess(callback: VoidFunction): VoidFunction {
-  (globalThis as unknown as { navigation: Navigation }).navigation
+  (globalThis as unknown as { navigation: EventTarget }).navigation
     .addEventListener("navigatesuccess", callback);
 
   return () => {
-    (globalThis as unknown as { navigation: Navigation }).navigation
+    (globalThis as unknown as { navigation: EventTarget }).navigation
       .removeEventListener("navigatesuccess", callback);
   };
 }

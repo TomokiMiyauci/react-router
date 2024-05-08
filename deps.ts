@@ -1,4 +1,4 @@
-// @deno-types="npm:@types/react@^18.0.0"
+// @deno-types="npm:@types/react@^18"
 export {
   createContext,
   createElement,
@@ -7,9 +7,8 @@ export {
   useContext,
   useMemo,
   useSyncExternalStore,
-} from "npm:/react@^18.0.0";
+} from "npm:/react@^18";
 export {
   URLPatternList,
   type URLPatternListResult,
 } from "./url_pattern_list/mod.ts";
-export { type Navigation } from "npm:/@virtualstate/navigation@1.0.1-alpha.201";

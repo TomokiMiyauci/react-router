@@ -1,5 +1,7 @@
 export { assertThrows } from "https://deno.land/std@0.220.1/assert/assert_throws.ts";
 export { assertEquals } from "https://deno.land/std@0.220.1/assert/assert_equals.ts";
+export { type Navigation } from "npm:/@virtualstate/navigation@1.0.1-alpha.201";
+
 import { createElement } from "react";
 import { renderToString } from "react-dom/server";
 
