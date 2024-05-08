@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/TomokiMiyauci/react-router/compare/1.1.0...1.2.0) (2024-05-08)
+
+
+### Features
+
+* **deps:** remove deps using only types ([33536fa](https://github.com/TomokiMiyauci/react-router/commit/33536fa4fc926eac61056cd6140cc3a159581be2))
+
 # [1.2.0-beta.1](https://github.com/TomokiMiyauci/react-router/compare/1.1.0...1.2.0-beta.1) (2024-05-08)
 
 
